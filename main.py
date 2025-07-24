@@ -9,6 +9,6 @@ with open("table.json", "r") as f:
     for syscall in j["syscalls"]:
         result.append(f'{syscall["name"]} = {syscall["number"]} ,\n')
 
-    result.append("}")
+    result.append("};")
     outf.writelines(result)
     outf.close()
